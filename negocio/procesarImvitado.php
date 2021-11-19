@@ -7,7 +7,7 @@ include_once "databaseManagement.inc.php";
 session_start();
 
 function seguro($valor)
-{
+{ 
     $valor = strip_tags($valor);
     $valor = stripslashes($valor);
     $valor = htmlspecialchars($valor);
@@ -35,3 +35,5 @@ if (count($_POST) > 0) {
 } else {
     sesionComprobar();
 }
+
+?>

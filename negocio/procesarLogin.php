@@ -24,3 +24,4 @@
             $error="Usuario no existe";
         }
     }
+?>
