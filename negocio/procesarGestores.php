@@ -16,10 +16,10 @@
                     return $listaVuelos;
                 }
             }else {
-                header("location: ../presentacion/index.php");
+                header("location: ../presentacion/index.html");
             }
         }else{
-            header("location: ../presentacion/index.php");
+            header("location: ../presentacion/index.html");
         }
         
 
