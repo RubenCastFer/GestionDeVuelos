@@ -45,6 +45,11 @@
 
         if($cumplido == false ){
             $error = "Error";
+        }else{
+            session_start();
+            if($_SESSION["correspondecia"]=="gestor"){
+                header("location: ../presentacion/gestor.php")
+            }
         }
         
     }
