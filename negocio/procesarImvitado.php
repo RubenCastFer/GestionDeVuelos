@@ -5,7 +5,7 @@
 include_once "../persistencia/databaseManagement.inc.php";
 
 session_start();
-$listaVuelos=[];
+$error="";
 function seguro($valor)
 { 
     $valor = strip_tags($valor);
@@ -15,6 +15,7 @@ function seguro($valor)
 }
 function sesionComprobar()
 {
+    $listaVuelos=[];
     if (isset($_SESSION["aeroOrigen"]) && isset($_SESSION["aeroDestino"])) {
         $listaVuelos = obtenerVuelos();
     } elseif (isset($_SESSION["aeroOrigen"])) {
@@ -24,7 +25,7 @@ function sesionComprobar()
     }
     return $listaVuelos;
 }
-if (count($_POST) > 0) {
+if (count($_POST) > 0 && isset($_POST["aero"])) {
     if (isset($_POST["aero"]["origen"])) {
         $_SESSION["aeroOrigen"] = 1;
     }
@@ -35,5 +36,8 @@ if (count($_POST) > 0) {
 } else {
     sesionComprobar();
 }
+
+
+
 
 ?>
