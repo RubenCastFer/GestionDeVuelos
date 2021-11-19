@@ -59,6 +59,12 @@
                     <th>Fecha</th>
                     <th>Número de pasajeros</th>
                 </tr>
+                <?php
+                foreach ($Vuelos as $Vuelo) {
+                    
+                }
+
+                ?>
                 
             </table>
         </div>
