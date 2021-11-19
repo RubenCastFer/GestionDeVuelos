@@ -5,7 +5,7 @@
 include_once "../persistencia/databaseManagement.inc.php";
 
 session_start();
-
+$listaVuelos=[];
 function seguro($valor)
 { 
     $valor = strip_tags($valor);
