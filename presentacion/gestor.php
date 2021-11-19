@@ -9,6 +9,7 @@
     <?php include_once "../negocio/procesarGestores.php"?>
     <title>Vuelos</title>
 </head>
+<?php session_start(); ?>
 <body>
     <header>
         <a id="titulocentral" href="#"> <!-- Enlace, el href puede cambiar según la sesión-->
@@ -19,7 +20,7 @@
             <ul>
                 <!-- Aquí habrá un if, dependiendo de la sesión. Si es gestor, saldrá la opción de crear-->
                 <li><a href="creacion.php">Crear vuelo</a></li>
-                <li><a href="login.php">Cerrar sesión</a></li>
+                <li><a href="index.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     
