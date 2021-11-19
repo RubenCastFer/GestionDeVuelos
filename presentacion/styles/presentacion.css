@@ -1,3 +1,4 @@
+/*Filtro*/
 
 div#fondofiltro{
     height: 80px;
@@ -6,9 +7,17 @@ div#fondofiltro{
     align-items: center;
 }
 
-
 table#filtro{
     text-align: center;
     width: 50%;
-    height: 120px;
+    margin: 0;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: #ddd;
+    border: solid 1px #555;
+    height: 80px;
 }
+
+/* Hacer un estilo del boton filtrar, que quede bien*/
+
+/* Fin filtro */

@@ -25,8 +25,7 @@
     </header>
     <div id="contenedor">
         <!-- Hacer formulario / Filtro, intentar sea vertical-->
-
-        <div id="fondofiltro">            
+        <div id="fondofiltro">  
             <table id="filtro">
                 <tr>
                     <td>
