@@ -11,14 +11,14 @@
 </head>
 <body>
 
-    <!--<?php
+    <?php
 
-        //variables de edicion
+        include "../negocio/procesarCreacion.php";
 
 
         
 
-    ?>-->
+    ?>
 
     <header>
         <a id="titulocentral" href="#"> <!-- Enlace, el href puede cambiar según la sesión-->
@@ -36,29 +36,30 @@
         <!--FORMULARIO DE EDICION-->
 
         <div class="main">
-            <section class="form-register">
-                <h4>Sección de creación</h4>
-                <label for="name">Ciudad de origen:</label>
-                <input class="controls" type="text" name="nombres" id="nombres" required="required" >
-                <br>
-                <label for="name">Ciudad de destino:</label>
-                <input class="controls" type="text" name="apellidos" id="apellidos" >
-                <br>
-                <label for="name">Operadora:</label>
-                <input class="controls" type="text" name="apellidos" id="apellidos" >
-                <br>
-                <label for="name">Fecha:</label>
-                <input type="date" name="fecha" step="1" min="2013-01-01" max="2013-12-31" value="2013-01-01">
-                <br>
-                <label for="name">Cantidad de viajeros</label>
-                <input class="controls" type="text" name="apellidos" id="apellidos" >
-                <br><br>
-                <button class="button__text"><a href="negocio/procesarLogin.php">Entrar</a></buttom>
-            </section>
-               
+            <form class="form-register" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data" method="POST">
+                <section class="form-register">
+                    <h4>Sección de creación</h4>
+                    <label for="name">Ciudad de origen:</label>
+                    <input class="controls" type="text" name="nombres" id="nombres" required="required" >
+                    <br>
+                    <label for="name">Ciudad de destino:</label>
+                    <input class="controls" type="text" name="apellidos" id="apellidos" >
+                    <br>
+                    <label for="name">Operadora:</label>
+                    <input class="controls" type="text" name="apellidos" id="apellidos" >
+                    <br>
+                    <label for="name">Fecha:</label>
+                    <input type="date" name="fecha" step="1" min="2013-01-01" max="2013-12-31" value="2013-01-01">
+                    <br>
+                    <label for="name">Cantidad de viajeros</label>
+                    <input class="controls" type="text" name="apellidos" id="apellidos" >
+                    <br><br>
+                    <button class="button__text"><a href="negocio/procesarLogin.php">Entrar</a></buttom>
+                </section>
+            </form>   
     </header>
     <div id="contenedor">
-        <p></p>
+        <p><?php echo $error?></p>
     </div>
 
     <footer id="main-footer"> <!-- Pie, se podría hacer 3 columnas para nombrar a los integrantes del grupo. -->

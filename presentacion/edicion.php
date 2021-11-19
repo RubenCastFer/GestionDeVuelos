@@ -14,12 +14,10 @@
 
         //variables de edicion
 
-        include "procesarEdicion.php";
+        include "../negocio/procesarEdicion.php";
 
-    
 
-        
-        
+
 
     ?>
 
@@ -39,30 +37,31 @@
         <!--FORMULARIO DE EDICION-->
 
         <div class="main">
-            <section class="form-register">
-                <h4>Sección de edición</h4>
-                <label for="name">Ciudad de origen:</label>
-                <input class="controls" type="text" name="origen" id="origen" required value="<?php echo $procesar["origen"]?>">
-                <br>
-                <label for="name">Ciudad de destino:</label>
-                <input class="controls" type="text" name="destino" id="destino" required value="<?php echo $procesar["destino"]?>">
-                <br>
-                <label for="name">Operadora:</label>
-                <input class="controls" type="text" name="operadora" id="operadora" required value="<?php echo $procesar["operadora"]?>">
-                <br>
-                <label for="name">Fecha:</label>
-                <input type="date" name="fecha" step="1" min="2013-01-01" max="2013-12-31" required value="<?php echo $procesar["fecha"]?>">
-                <br>
-                <label for="name">Cantidad de viajeros</label>
-                <input class="controls" type="text" name="cantidadViajero" id="cantidadViajero" required value="<?php echo $procesar["cantidadViajero"]?>">
+            <form class="form-register" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data" method="POST">
+                <section class="form-register">
+                    <h4>Sección de edición</h4>
+                    <label for="name">Ciudad de origen:</label>
+                    <input class="controls" type="text" name="origen" id="origen" required value="<?php echo $cumplido["origen"]?>">
+                    <br>
+                    <label for="name">Ciudad de destino:</label>
+                    <input class="controls" type="text" name="destino" id="destino" required value="<?php echo $cumplido["destino"]?>">
+                    <br>
+                    <label for="name">Operadora:</label>
+                    <input class="controls" type="text" name="operadora" id="operadora" required value="<?php echo $cumplido["operadora"]?>">
+                    <br>
+                    <label for="name">Fecha:</label>
+                    <input type="date" name="fecha" step="1" min="2013-01-01" max="2013-12-31" required value="<?php echo $cumplido["fecha"]?>">
+                    <br>
+                    <label for="name">Cantidad de viajeros</label>
+                    <input class="controls" type="text" name="cantidadViajero" id="cantidadViajero" required value="<?php echo $cumplido["cantidadViajero"]?>">
+                    <br><br>
+                    <button class="button__text"><a href="negocio/procesarLogin.php">Entrar</a></buttom>  
+                </section>
                 <br><br>
-                <button class="button__text"><a href="negocio/procesarLogin.php">Entrar</a></buttom>  
-            </section>
-            <br><br>
-    
+            </form>
     </header>
     <div id="contenedor">
-        <p></p>
+        <p><?php echo $error?></p>
     </div>
 
     <footer id="main-footer"> <!-- Pie, se podría hacer 3 columnas para nombrar a los integrantes del grupo. -->
