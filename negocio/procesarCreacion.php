@@ -2,6 +2,7 @@
     /*
         recoger datos de gestor segun la sesiones, gestinar con bd y devolver resultados "seguro"
     */ 
+    include_once "../persistencia/databaseManagement.inc.php";
 
     $error = "";
     if (count($_POST) > 0) {
