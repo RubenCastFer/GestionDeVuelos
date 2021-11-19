@@ -173,7 +173,6 @@ function creaConexion(){
     }
 
     function obtenerVuelo($id){
-        {
             try {
               $conexion=creaConexion();
                 $sql = $conexion->prepare("SELECT * from vuelos where id=:id");
@@ -191,3 +190,4 @@ function creaConexion(){
 
  
 ?>
+
