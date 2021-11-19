@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
+    <?php
+    include "databaseManagement.inc.php";
+    ?>
       
     <div class="container">
         <div class="screen">
