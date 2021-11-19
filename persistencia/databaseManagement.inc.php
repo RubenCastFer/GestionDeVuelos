@@ -184,9 +184,9 @@ function creaConexion(){
             } catch (PDOException $e) {
                 echo $e;
             }
-        }
-
     }
+
+    
 
  
 ?>

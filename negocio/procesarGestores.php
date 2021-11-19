@@ -16,10 +16,10 @@
                     return $listaVuelos;
                 }
             }else {
-                header("location: index.php");
+                header("location: ../presentacion/index.php");
             }
         }else{
-            header("location: index.php");
+            header("location: ../presentacion/index.php");
         }
         
 
