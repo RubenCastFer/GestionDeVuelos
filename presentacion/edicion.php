@@ -10,16 +10,18 @@
 </head>
 <body>
 
-    <!--<?php
+    <?php
 
         //variables de edicion
 
         include "procesarEdicion.php";
 
-        $procesar
+
+
+        $procesar;
         
 
-    ?>-->
+    ?>
 
     <header>
         <a id="titulocentral" href="#"> <!-- Enlace, el href puede cambiar según la sesión-->
@@ -40,19 +42,19 @@
             <section class="form-register">
                 <h4>Sección de edición</h4>
                 <label for="name">Ciudad de origen:</label>
-                <input class="controls" type="text" name="nombres" id="nombres" required="required" placeholder="Ciudad de origen">
+                <input class="controls" type="text" name="origen" id="origen" required value="<?php echo $procesar["origen"]?>">
                 <br>
                 <label for="name">Ciudad de destino:</label>
-                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ciudad de destino">
+                <input class="controls" type="text" name="destino" id="destino" required value="<?php echo $procesar["destino"]?>">
                 <br>
                 <label for="name">Operadora:</label>
-                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Operadora">
+                <input class="controls" type="text" name="operadora" id="operadora" required value="<?php echo $procesar["operadora"]?>">
                 <br>
                 <label for="name">Fecha:</label>
-                <input type="date" name="fecha" step="1" min="2013-01-01" max="2013-12-31" value="2013-01-01">
+                <input type="date" name="fecha" step="1" min="2013-01-01" max="2013-12-31" required value="<?php echo $procesar["fecha"]?>">
                 <br>
                 <label for="name">Cantidad de viajeros</label>
-                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Cantidad de viajeros">
+                <input class="controls" type="text" name="cantidadViajero" id="cantidadViajero" required value="<?php echo $procesar["cantidadViajero"]?>">
                 <br><br>
                 <button class="button__text"><a href="negocio/procesarLogin.php">Entrar</a></buttom>  
             </section>
