@@ -84,8 +84,8 @@
         
         
     </div>  <!-- Fin contenedor -->
-    <footer id="main-footer"> <!-- Pie, se podría hacer 3 columnas para nombrar a los integrantes del grupo. -->
-        <p>Pensar todavía.</p>
+    <footer id="main-footer">
+        <p>Desarrollo web en Entorno Servidor.</p>
     </footer>
 </body>
 </html>
