@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/tripulacion.css">
-    <?php include_once "../negocio/procesarTripulacion.php.php"?>
+    <?php include_once "../negocio/procesarTripulacion.php"?>
     <title>Vuelos</title>
 </head>
 <?php session_start(); ?>
