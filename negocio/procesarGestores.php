@@ -3,7 +3,7 @@
     /*
         recoger datos de gestor segun la sesiones, gestinar con bd y devolver resultados "seguro"
     */
-    include "databaseManagement.inc.php";
+    include "../persistencia/databaseManagement.inc.php";
 
     function listaVuelosGestor(){
 
