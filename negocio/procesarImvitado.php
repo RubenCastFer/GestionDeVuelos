@@ -18,23 +18,25 @@ function sesionComprobar()
     $listaVuelos=[];
     if (isset($_SESSION["aeroOrigen"]) && isset($_SESSION["aeroDestino"])) {
         $listaVuelos = obtenerVuelos();
-    } elseif (isset($_SESSION["aeroOrigen"])) {
+        var_dump($listaVuelos); 
+   } elseif (isset($_SESSION["aeroOrigen"])) {
         $listaVuelos = consultaVuelosInvitadosLlegada(seguro($_POST["ciudad"]));
     } elseif (isset($_SESSION["aeroDestino"])) {
         $listaVuelos = consultaVuelosInvitadosSalida(seguro($_POST["ciudad"]));
     }
     return $listaVuelos;
 }
-if (count($_POST) > 0 && isset($_POST["aero"])) {
-    if (isset($_POST["aero"]["origen"])) {
+if (count($_POST) > 0) {
+    if (isset($_POST["aero"][0])) {
         $_SESSION["aeroOrigen"] = 1;
     }
-    if (isset($_POST["aero"]["destino"])) {
+    if (isset($_POST["aero"][1])) {
+        echo "Hola";
         $_SESSION["aeroDestino"] = 1;
     }
-    sesionComprobar();
+    $listaVuelos=sesionComprobar();
 } else {
-    sesionComprobar();
+    $listaVuelos=sesionComprobar();
 }
 
 

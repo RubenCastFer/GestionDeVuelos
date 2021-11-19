@@ -27,8 +27,8 @@
     </header>
     <div id="contenedor">
         <div id="fondofiltro">    
-            <table id="filtro">
-            <form method="GET">
+            <table id="filtro"> 
+            <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
                 <tr>
                     <td>
                         <input type="checkbox" name="aero[]" value="origen" id="origen">
@@ -64,12 +64,12 @@
                     <th>Número de pasajeros</th>
                 </tr>
                 <?php
-                foreach ($ListaVuelos as $Vuelo) {
-                    $origen = $ListaVuelos ["origen"];
-                    $destino = $ListaVuelos ["destino"];
-                    $companya = $ListaVuelos ["operadora"];
-                    $fecha = $ListaVuelos ["fecha"];
-                    $pasajeros = $ListaVuelos ["cantidadViajero"];
+                foreach ($listaVuelos as $Vuelo) {
+                    $origen = $Vuelo ["origen"];
+                    $destino = $Vuelo ["destino"];
+                    $companya = $Vuelo ["operadora"];
+                    $fecha = $Vuelo ["fecha"];
+                    $pasajeros = $Vuelo ["cantidadViajero"];
                     echo "<tr>";
                     echo "<td>$origen</td>";
                     echo "<td>$destino</td>";
