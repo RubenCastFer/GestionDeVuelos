@@ -22,46 +22,40 @@
                 <li><a href="../negocio/cerrarSesion.php">Cerrar sesión</a></li>
             </ul>
         </nav>
-    
     </header>
     <div id="contenedor">
-        
-    <div class="contenedora">
-        <div class="principal">
-            <table style="width: 100%;">
-                <tr>
-                    <th>Origen</th>
-                    <th>Destino</th>
-                    <th>Compañia</th>
-                    <th>Fecha</th>
-                    <th>Número de pasajeros</th>
-                    <th>Editar</th>
-                </tr>
-                <?php
-                foreach ($ListaVuelos as $Vuelo) {
-                    $origen = $ListaVuelos ["origen"];
-                    $destino = $ListaVuelos ["destino"];
-                    $companya = $ListaVuelos ["operadora"];
-                    $fecha = $ListaVuelos ["fecha"];
-                    $pasajeros = $ListaVuelos ["cantidadViajero"];
-                    $id = $ListaVuelos ["id"];
-                    echo "<tr>";
-                    echo "<td>$origen</td>";
-                    echo "<td>$destino</td>";
-                    echo "<td>$companya</td>";
-                    echo "<td>$fecha</td>";
-                    echo "<td>$pasajeros</td>";
-                    echo "<td><a href='./edicion.php?id=". $id."'>Editar</a></td>";
-                    echo "</tr>";
-                }
-                ?>
-            </table>
-        </div>
-    </div>
-    
-</div>
-        
-        
+        <div class="contenedora">
+            <div class="principal">
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Compañia</th>
+                        <th>Fecha</th>
+                        <th>Número de pasajeros</th>
+                        <th>Editar</th>
+                    </tr>
+                    <?php
+                    foreach ($ListaVuelos as $Vuelo) {
+                        $origen = $ListaVuelos ["origen"];
+                        $destino = $ListaVuelos ["destino"];
+                        $companya = $ListaVuelos ["operadora"];
+                        $fecha = $ListaVuelos ["fecha"];
+                        $pasajeros = $ListaVuelos ["cantidadViajero"];
+                        $id = $ListaVuelos ["id"];
+                        echo "<tr>";
+                        echo "<td>$origen</td>";
+                        echo "<td>$destino</td>";
+                        echo "<td>$companya</td>";
+                        echo "<td>$fecha</td>";
+                        echo "<td>$pasajeros</td>";
+                        echo "<td><a href='./edicion.php?id=". $id."'>Editar</a></td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </table>
+            </div>
+        </div>     
     </div>  <!-- Fin contenedor -->
     <footer id="main-footer"> 
         <p>Desarrollo web en Entorno Servidor.</p>
