@@ -1,0 +1,14 @@
+
+div#fondofiltro{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+table#filtro{
+    text-align: center;
+    width: 50%;
+    height: 120px;
+}
