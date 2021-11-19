@@ -45,7 +45,7 @@
                     $destino = $ListaVuelos ["destino"];
                     $companya = $ListaVuelos ["operadora"];
                     $fecha = $ListaVuelos ["fecha"];
-                    $pasajeros = $ListaVuelos ["cantidadViajeros"];
+                    $pasajeros = $ListaVuelos ["cantidadViajero"];
                     $id = $ListaVuelos ["id"];
                     echo "<tr>";
                     echo "<td>$origen</td>";
