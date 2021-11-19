@@ -31,15 +31,19 @@
             <form method="GET">
                 <tr>
                     <td>
-                        <input type="checkbox" name="aero" value="origen" id="origen">
+                        <input type="checkbox" name="aero[]" value="origen" id="origen">
                         <label for="origen">Origen</label><br>
 
-                        <input type="checkbox" name="aero" value="destino" id="destino">
-                        <label for="destino">Destino</label>
+                        <input type="checkbox" name="aero[]" value="destino" id="destino">
+                        <label for="destino">Destino</label><br>
+
+                        <?php // En caso de que hubiese un error al no señalar un checkbox
+                            echo $error;
+                        ?>
                     </td>
                     <td>
                         <label for="ciudad">Nombre de la ciudad</label><br>
-                        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
+                        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" required>
                     </td>
                     <td>
                         <input type="submit" id="submit" value="Filtrar">
