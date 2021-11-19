@@ -55,9 +55,7 @@
                 <br><br>
                 <button class="button__text"><a href="negocio/procesarLogin.php">Entrar</a></buttom>
             </section>
-            <br><br>
-            
-    
+               
     </header>
     <div id="contenedor">
         <p></p>
