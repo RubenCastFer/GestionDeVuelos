@@ -7,7 +7,7 @@ $pass="developer";
 //funciones base de datos:
     //usuario invitado
     function consultaVuelosInvitadosLlegada(){
-
+        //hola
     }
 
     function consultaVuelosInvitadosSalida(){
