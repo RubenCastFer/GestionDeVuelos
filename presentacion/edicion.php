@@ -14,7 +14,9 @@
 
         //variables de edicion
 
+        include "procesarEdicion.php";
 
+        $procesar
         
 
     ?>-->
