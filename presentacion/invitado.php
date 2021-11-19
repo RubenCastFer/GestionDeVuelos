@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/presentacion.css">
+    <link rel="stylesheet" href="styles/invitado.css">
+    <?php include_once "../negocio/procesarImvitado.php"?>
     <title>Vuelos</title>
 </head>
 <body>
@@ -24,9 +25,9 @@
     
     </header>
     <div id="contenedor">
-        <!-- Hacer formulario / Filtro, intentar sea vertical-->
-        <div id="fondofiltro">  
+        <div id="fondofiltro">    
             <table id="filtro">
+            <form method="GET">
                 <tr>
                     <td>
                         <input type="checkbox" name="aero" value="origen" id="origen">
@@ -40,11 +41,30 @@
                         <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
                     </td>
                     <td>
-                        <input type="submit" value="Filtrar">
+                        <input type="submit" id="submit" value="Filtrar">
                     </td>
                 </tr>
+            </form>
+            </table>    
+        </div>
+
+    <div class="contenedora">
+        <div class="principal">
+            <table style="width: 100%;">
+                <tr>
+                    <th>Origen</th>
+                    <th>Destino</th>
+                    <th>Compañia</th>
+                    <th>Fecha</th>
+                    <th>Número de pasajeros</th>
+                </tr>
+                
             </table>
         </div>
+    </div>
+    
+</div>
+        
         
     </div>  <!-- Fin contenedor -->
     <footer id="main-footer"> <!-- Pie, se podría hacer 3 columnas para nombrar a los integrantes del grupo. -->
