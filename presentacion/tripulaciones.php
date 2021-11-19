@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <!-- Aquí habrá un if, dependiendo de la sesión. Si es gestor, saldrá la opción de crear-->
-                <li><a href="index.php">Cerrar sesión</a></li>
+                <li><a href="../negocio/cerrarSesion.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     
@@ -37,6 +37,24 @@
                     <th>Número de pasajeros</th>
                     <th>Editar</th>
                 </tr>
+                <?php
+                foreach ($ListaVuelos as $Vuelo) {
+                    $origen = $ListaVuelos ["origen"];
+                    $destino = $ListaVuelos ["destino"];
+                    $companya = $ListaVuelos ["operadora"];
+                    $fecha = $ListaVuelos ["fecha"];
+                    $pasajeros = $ListaVuelos ["cantidadViajeros"];
+                    $id = $ListaVuelos ["id"];
+                    echo "<tr>";
+                    echo "<td>$origen</td>";
+                    echo "<td>$destino</td>";
+                    echo "<td>$companya</td>";
+                    echo "<td>$fecha</td>";
+                    echo "<td>$pasajeros</td>";
+                    echo "<td><a href='./edicion.php?id=". $id."'>Editar</a></td>";
+                    echo "</tr>";
+                }
+                ?>
             </table>
         </div>
     </div>

@@ -9,7 +9,7 @@
     <?php include_once "../negocio/procesarImvitado.php"?>
     <title>Vuelos</title>
 </head>
-<?php session_start(); ?>
+
 <body>
     <header>
         <a id="titulocentral" href="#"> <!-- Enlace, el href puede cambiar según la sesión-->
@@ -60,10 +60,20 @@
                     <th>Número de pasajeros</th>
                 </tr>
                 <?php
-                foreach ($Vuelos as $Vuelo) {
-                    
+                foreach ($ListaVuelos as $Vuelo) {
+                    $origen = $ListaVuelos ["origen"];
+                    $destino = $ListaVuelos ["destino"];
+                    $companya = $ListaVuelos ["operadora"];
+                    $fecha = $ListaVuelos ["fecha"];
+                    $pasajeros = $ListaVuelos ["cantidadViajeros"];
+                    echo "<tr>";
+                    echo "<td>$origen</td>";
+                    echo "<td>$destino</td>";
+                    echo "<td>$companya</td>";
+                    echo "<td>$fecha</td>";
+                    echo "<td>$pasajeros</td>";
+                    echo "</tr>";
                 }
-
                 ?>
                 
             </table>
