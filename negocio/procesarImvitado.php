@@ -2,7 +2,7 @@
 /*
         recoger datos de invitados segun el filtro, gestinar con bd y devolver [] "seguro"
     */
-include_once "databaseManagement.inc.php";
+include_once "../persistencia/databaseManagement.inc.php";
 
 session_start();
 

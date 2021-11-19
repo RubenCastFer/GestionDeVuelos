@@ -2,6 +2,7 @@
     /*
         buscar usuario redireccionar a gestor o a tripulacion por sesion
     */ 
+    include_once "../persistencia/databaseManagement.inc.php";
 
     $error='';
     if (count($_POST) > 0) {
